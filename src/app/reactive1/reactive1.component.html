@@ -1,0 +1,19 @@
+<p>reactive1 works!</p>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+    <label>Name</label>
+    <input formControlName="name"/>
+    @if (contactForm.get("name")?.invalid && contactForm.get("name") ?.touched){
+        <small style="color: red;">Name is required and min 3 characters</small>
+    }
+    <br/>
+        <label>Email</label>
+    <input formControlName="email"/>
+    @if (contactForm.get("email")?.invalid && contactForm.get("email") ?.touched){
+        <small style="color: red;">email is required and should be a valid email</small>
+    }
+    <br/>
+    <button type="submit" [disabled]="contactForm.invalid">Submit</button>
+</form>
+
+{{res | json}}

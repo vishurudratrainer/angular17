@@ -1,0 +1,33 @@
+<p>parent works!</p>
+<div style="font-family: sans-serif;max-width: 600px;margin: auto;">
+<h1>Defer demo</h1>
+<div style="height: 100vh;background: #e32ffd;padding: 20px;border: 2px dashed #cccccc;">
+<h2>Second dic</h2>
+<p>
+  "userId": 1,
+  "id": 11,
+  "title": "vero rerum temporibus dolor",
+  "completed": true
+</p>
+<p>
+  "userId": 1,
+  "id": 11,
+  "title": "vero rerum temporibus dolor",
+  "completed": true
+</p>
+</div>
+
+@defer( on viewport){
+    <app-chart [data]="mychartValues()"/>
+}
+@placeholder{
+    <div>
+        Wait for it
+    </div>
+}
+@loading(minimum 1s){
+    <div>
+        Loading big chart
+    </div>
+}
+</div>

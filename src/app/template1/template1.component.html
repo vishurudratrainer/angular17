@@ -1,0 +1,10 @@
+<p>template1 works!</p>
+<form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm.value)">
+    <input name="user" ngModel required #user="ngModel" placeholder="Enter user"/>
+    @if(user.invalid && user.touched){
+        <small style="color: red;">Required </small>
+    }
+    <button type="submit" [disabled]="user.invalid">Submit</button>
+
+</form>
+<h1>{{res | json}}</h1>

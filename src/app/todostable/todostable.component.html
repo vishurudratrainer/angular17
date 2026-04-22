@@ -1,0 +1,28 @@
+<p>todostable works!</p>
+
+
+<button (click)="onButtonClick2()">Fetch data2</button>
+
+
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>USERID</th>
+            <th>Link</th>
+            <th>COMPLETED</th>
+        </tr>
+    </thead>
+    @for(todo of todoData;track todo.id){
+    <tr>
+        <td>{{todo.id}}</td>
+        <td>{{todo.userId}}</td>
+        <td><a [routerLink]="['/singletodo',todo.id]" [queryParams]="{title:todo.title}">
+            Link for {{todo.id}}</a>
+        </td>
+        <td>{{todo.completed}}</td>
+
+    </tr>
+    }
+</table>

@@ -1,0 +1,14 @@
+<p>postge1 works!</p>
+
+<form [formGroup]="allInputsForm" (ngSubmit)="onFetch()">
+    <label>Enter user id <input name="userId" type="number" formControlName="userId"/></label>
+    <br />
+    <label>Enter todoId <input type="number" formControlName="todoId" /></label>
+    <br />
+    <label>Enter completed <input type="boolean" formControlName="completed" /></label>
+    <br />
+    <button type="submit" [disabled]="allInputsForm.invalid">Submit</button>
+
+</form>
+
+<h1>{{res | json}}</h1>

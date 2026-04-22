@@ -1,0 +1,30 @@
+<p>todos1 works!</p>
+
+
+<button (click)="onButtonClick()">Fetch data</button>
+{{todosResponse | json}}
+
+<button (click)="onButtonClick2()">Fetch data2</button>
+
+<button (click)="onButtonClick3()">Fetch comment</button>
+{{comments | json}}
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>USERID</th>
+            <th>TITLE</th>
+            <th>COMPLETED</th>
+        </tr>
+    </thead>
+    @for(todo of todoData;track todo.id){
+    <tr>
+        <td>{{todo.id}}</td>
+        <td>{{todo.userId}}</td>
+        <td>{{todo.title}}</td>
+        <td>{{todo.completed}}</td>
+
+    </tr>
+    }
+</table>

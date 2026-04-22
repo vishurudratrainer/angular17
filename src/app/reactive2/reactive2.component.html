@@ -1,0 +1,29 @@
+<p>reactive2 works!</p>
+
+<form [formGroup]="allInputsForm" (ngSubmit)="onsubmit()">
+    <label>Enter full name <input formControlName="fullName" /></label>
+    <br />
+    <label>Enter email <input type="email" formControlName="email" /></label>
+    <br />
+    <label>Enter age <input type="number" formControlName="age" /></label>
+    <br />
+    <label>Enter bio <textarea formControlName="bio" ></textarea></label>
+    <br />
+    <label>Enter dob <input type="date" formControlName="dob" /></label>
+    <br />
+    <label>Select gender
+       Male <input type="radio" value="male" formControlName="gender" />
+      Female  <input type="radio" value="female" formControlName="gender" />
+    </label>
+    <label>Select country
+        <select formControlName="country">
+            <option value="US">US</option>
+            <option value="UK">UK</option>
+            <option value="IN">IN</option>
+
+        </select>
+    </label>
+    <br/>
+    <button type="submit" [disabled]="allInputsForm.invalid">Submit</button>
+</form>
+<h1>{{res | json }}</h1>

@@ -1,0 +1,19 @@
+<p>switch works!</p>
+
+<select [(ngModel)]="userRole">
+    <option value="">Blank</option>
+    <option value='admin'>Admin</option>
+    <option value='user'>User</option>
+</select>
+
+<div [ngSwitch]="userRole">
+    <p *ngSwitchCase="'admin'">Admin is selected</p>
+    <p *ngSwitchCase="'user'">User is selected</p>
+    <p *ngSwitchDefault>Default</p>
+</div>
+
+@switch(userRole){
+@case("admin"){<p>Admin is selected</p>}
+@case("user"){<p>User is selected</p>}
+@default{<p>Default</p>}
+}

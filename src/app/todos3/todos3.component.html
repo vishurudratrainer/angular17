@@ -1,0 +1,23 @@
+<p>todos3 works!</p>
+
+
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>USERID</th>
+            <th>TITLE</th>
+            <th>COMPLETED</th>
+        </tr>
+    </thead>
+    @for(todo of todos();track todo.id){
+    <tr>
+        <td>{{todo.id}}</td>
+        <td>{{todo.userId}}</td>
+        <td>{{todo.title}}</td>
+        <td>{{todo.completed}}</td>
+
+    </tr>
+    }
+</table>
